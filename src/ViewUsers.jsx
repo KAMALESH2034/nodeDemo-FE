@@ -12,7 +12,7 @@ let getUser = async() =>{
     try{
 
        const userResp = await axios.get(
-        `http://localhost:3000/user/${params.id}`)
+        `https://nodedemo-be.onrender.com/user/${params.id}`)
         setUser(userResp.data)
     }catch(error){
         console.log(error);

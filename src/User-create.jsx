@@ -33,7 +33,7 @@ function UserCreate() {
       try{
         console.log(values);
         
-        await axios.post("http://localhost:3000/user",values);
+        await axios.post("https://nodedemo-be.onrender.com/user",values);
         navigate("/");
         
 

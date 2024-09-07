@@ -9,7 +9,7 @@ function Users() {
     const [users,setUsers] = useState([])
 
     const getAllUsers = async()=>{
-      await axios.get("http://localhost:3000/users").then
+      await axios.get("https://nodedemo-be.onrender.com/users").then
       ((res)=>{
         console.log(res.data)
         setUsers(res.data);
@@ -25,7 +25,7 @@ function Users() {
     let deleteUser = async(id) =>{
          let yesno = confirm("Are you sure you want to delete this user ?")
          if(yesno){
-            await axios.delete(`http://localhost:3000/user/${id}`)
+            await axios.delete(`https://nodedemo-be.onrender.com/user/${id}`)
          }
          getAllUsers(); 
     }

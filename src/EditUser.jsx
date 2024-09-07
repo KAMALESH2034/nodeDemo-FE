@@ -34,7 +34,7 @@ function EditUser() {
       try{
         console.log(values);
         
-        await axios.put(`http://localhost:3000/user/${params.id}`,values);
+        await axios.put(`https://nodedemo-be.onrender.com/user/${params.id}`,values);
         navigate("/");
         
 
@@ -48,7 +48,7 @@ function EditUser() {
     try{
 
        const userResp = await axios.get(
-        `http://localhost:3000/user/${params.id}`);
+        `https://nodedemo-be.onrender.com/user/${params.id}`);
         formik.setValues(userResp.data)
     }catch(error){
         console.log(error);
